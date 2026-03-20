@@ -1,0 +1,107 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Neon glow filter -->
+    <filter id="neonGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Screen ambient glow -->
+    <filter id="screenGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Screen scanlines -->
+    <pattern id="scanlines" x="0" y="0" width="1" height="2" patternUnits="userSpaceOnUse">
+      <rect width="1" height="1" fill="rgba(0,255,153,0.04)"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="64" height="64" rx="6" fill="#0b0f1a"/>
+
+  <!-- ── Arcade Cabinet body ── -->
+  <!-- Main cabinet shell -->
+  <rect x="14" y="7" width="36" height="52" rx="5" fill="#111827"/>
+  <!-- Cabinet edge highlights (left/right rails) -->
+  <rect x="14" y="10" width="3" height="44" rx="1" fill="#1e2d45"/>
+  <rect x="47" y="10" width="3" height="44" rx="1" fill="#1e2d45"/>
+
+  <!-- ── Screen bezel ── -->
+  <rect x="18" y="11" width="28" height="24" rx="2" fill="#0a0a14"/>
+
+  <!-- ── Screen ── -->
+  <rect x="20" y="13" width="24" height="20"
+        fill="#001a12"
+        stroke="#00ff99"
+        stroke-width="1.2"
+        filter="url(#screenGlow)"/>
+
+  <!-- Screen scanline overlay -->
+  <rect x="20" y="13" width="24" height="20" fill="url(#scanlines)" opacity="0.6"/>
+
+  <!-- Screen ambient inner glow (top edge) -->
+  <rect x="21" y="14" width="22" height="2" fill="#00ff99" opacity="0.06"/>
+
+  <!-- ── Pixel "A" on screen ── -->
+  <g fill="#00ff99" filter="url(#neonGlow)">
+    <!-- Top of A -->
+    <rect x="29.5" y="16" width="5" height="3"/>
+    <!-- Left leg -->
+    <rect x="25" y="19" width="4" height="3"/>
+    <!-- Right leg -->
+    <rect x="35" y="19" width="4" height="3"/>
+    <!-- Crossbar -->
+    <rect x="25" y="22" width="14" height="3"/>
+    <!-- Lower left leg -->
+    <rect x="25" y="25" width="4" height="4"/>
+    <!-- Lower right leg -->
+    <rect x="35" y="25" width="4" height="4"/>
+  </g>
+
+  <!-- ── Separator bar between screen and controls ── -->
+  <rect x="17" y="35" width="30" height="2" fill="#0f1a2e"/>
+
+  <!-- ── Control Panel ── -->
+  <rect x="18" y="37" width="28" height="8" rx="1" fill="#1a2438"/>
+  <!-- Panel top highlight -->
+  <rect x="18" y="37" width="28" height="1" fill="#243250"/>
+
+  <!-- ── Joystick ── -->
+  <!-- Joystick base plate -->
+  <circle cx="27" cy="40" r="3.5" fill="#0f1a2e"/>
+  <!-- Joystick ball (knob) -->
+  <circle cx="27" cy="39" r="2.8" fill="#ff2fd1" filter="url(#neonGlow)"/>
+  <!-- Joystick stick (below the ball, inside the panel) -->
+  <rect x="26.2" y="41" width="1.6" height="3" rx="0.5" fill="#00ff99"/>
+
+  <!-- ── Action Buttons ── -->
+  <!-- Button X -->
+  <circle cx="37" cy="40" r="2.5" fill="#00ff99" filter="url(#neonGlow)"/>
+  <!-- Button Y -->
+  <circle cx="43" cy="40" r="2.5" fill="#ff2fd1" filter="url(#neonGlow)"/>
+
+  <!-- Button labels (clean single-char, legible at icon size) -->
+  <text x="37" y="41.6"
+        font-family="monospace" font-size="3.2" font-weight="bold"
+        text-anchor="middle" fill="#001a12">X</text>
+  <text x="43" y="41.6"
+        font-family="monospace" font-size="3.2" font-weight="bold"
+        text-anchor="middle" fill="#001a12">Y</text>
+
+  <!-- ── Base / Coin slot ── -->
+  <rect x="20" y="47" width="24" height="5" rx="1" fill="#0f1522"/>
+  <!-- Coin slot line -->
+  <rect x="28" y="49" width="8" height="1.5" rx="0.5" fill="#243250"/>
+
+  <!-- ── Bottom feet ── -->
+  <rect x="16" y="52" width="8" height="3" rx="1" fill="#0f1522"/>
+  <rect x="40" y="52" width="8" height="3" rx="1" fill="#0f1522"/>
+
+</svg>
