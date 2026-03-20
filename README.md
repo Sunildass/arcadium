@@ -7,15 +7,6 @@
 
 **Arcadium** is a high-performance, open-source multi-game platform featuring over **60+ games**. Built with a retro-neon/cyberpunk aesthetic, it provides a seamless, zero-latency arcade experience directly in the browser.
 
-![Arcadium Landing Screen](public/screenshots/landing_screen.png)
-
-## 🖼️ Visual Tour
-
-| **Category Discovery** | **Game Library** |
-| :---: | :---: |
-| ![Categories](public/screenshots/categories_screen.png) | ![Library](public/screenshots/library_screen.png) |
-| Search and explore games by category | Track wins and time played per game |
-
 ---
 
 ## 🏗️ Technical Architecture
